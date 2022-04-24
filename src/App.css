@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #f9cbd0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #6e82b7;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +35,31 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.game {
+  width: 95vw;
+  height: 113vw;
+  margin: 30px auto;
+  padding: 8px;
+  background-color: #000000;
+  border-radius: 2px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.puzzle_img {
+  width: 18vw;
+  height: 18vw;
+  float: left;
+  padding: 1px;
+  cursor: pointer;
+  left: 0px;
+  top: 0px;
+  position: relative;
+  transition: 0.1s ease transform;
 }
