@@ -5,8 +5,8 @@ function getRandomInt(max) {
 function check(permutation, keypoint) {
   const n = permutation.length;
   let parity = 0;
-  for (let i = 0; i < n; ++i) if (i != keypoint) {
-    for (let j = 0; j < i; ++j) if (j != keypoint) {
+  for (let i = 0; i < n; ++i) if (permutation[i] != keypoint) {
+    for (let j = 0; j < i; ++j) if (permutation[j] != keypoint) {
       parity ^= permutation[j] < permutation[i];
     }
   }
