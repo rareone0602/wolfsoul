@@ -7,7 +7,7 @@ function check(permutation, keypoint) {
   let parity = 0;
   for (let i = 0; i < n; ++i) if (permutation[i] != keypoint) {
     for (let j = 0; j < i; ++j) if (permutation[j] != keypoint) {
-      parity ^= permutation[j] < permutation[i];
+      parity ^= permutation[j] > permutation[i];
     }
   }
   return parity == 0;
