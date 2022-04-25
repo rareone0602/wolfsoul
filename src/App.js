@@ -40,15 +40,14 @@ class Board extends React.Component {
   }
 
   render() {
-    const status = "Make Your Own Birthday Gift!";
+    
     return (
       <div>
-        <div className="status">{status}</div>
-          {this.renderRow(this.props.permutation.slice( 0,  3))}
-          {this.renderRow(this.props.permutation.slice( 3,  6))}
-          {this.renderRow(this.props.permutation.slice( 6,  9))}
-          {this.renderRow(this.props.permutation.slice( 9, 12))}
-          {this.renderRow(this.props.permutation.slice(12, 15))}
+        {this.renderRow(this.props.permutation.slice( 0,  3))}
+        {this.renderRow(this.props.permutation.slice( 3,  6))}
+        {this.renderRow(this.props.permutation.slice( 6,  9))}
+        {this.renderRow(this.props.permutation.slice( 9, 12))}
+        {this.renderRow(this.props.permutation.slice(12, 15))}
       </div>
     );
   }
@@ -58,7 +57,7 @@ class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      permutation: even_permutation(5 * 3)
+      permutation: even_permutation(5 * 3, 3 * 3 + 1)
     };
   }
 
@@ -97,13 +96,13 @@ class Game extends React.Component {
 
   render() {
     return (
-      
       <div className="game">
         <div className='game-restart'>
-          <button onClick={()=>this.setState({permutation: even_permutation(5 * 3)})}>
+          <button onClick={()=>this.setState({permutation: even_permutation(5 * 3, 3 * 3 + 1)})}>
             Restart
           </button>
         </div>
+        <div className="status">Make Your Own Birthday Gift!</div>
         <div className="game-board">
           <Board permutation={this.state.permutation} onClick={i => this.handleClick(i)}/>
         </div>
