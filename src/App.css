@@ -38,8 +38,8 @@
 }
 
 .game {
-  width: 95vw;
-  height: 113vw;
+  width: 62vw;
+  height: 104vw;
   margin: 30px auto;
   padding: 8px;
   background-color: #000000;
@@ -53,8 +53,8 @@
 }
 
 .puzzle_img {
-  width: 18vw;
-  height: 18vw;
+  width: 20vw;
+  height: 20vw;
   float: left;
   padding: 1px;
   cursor: pointer;
