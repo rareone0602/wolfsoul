@@ -1,0 +1,23 @@
+{
+  "name": "wolfsoul",
+  "version": "1.0.0",
+  "description": "Happy birthday to wolfsoul!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rareone0602/wolfsoul.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rareone0602/wolfsoul/issues"
+  },
+  "homepage": "https://github.com/rareone0602/wolfsoul#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
