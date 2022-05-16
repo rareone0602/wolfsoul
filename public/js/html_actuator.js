@@ -140,6 +140,11 @@ HTMLActuator.prototype.message = function (won) {
     img.setAttribute("src", "imgs/Gift.jpeg");
     img.setAttribute("height", "80%");
     img.setAttribute("alt", "Gift");
+  } else {
+    img.setAttribute("src", "imgs/Rickroll.gif");
+    img.setAttribute("width", "80%");
+    img.setAttribute("style", "padding:10%");
+    img.setAttribute("alt", "Gift");
   }
 };
 
