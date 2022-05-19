@@ -138,13 +138,16 @@ HTMLActuator.prototype.message = function (won) {
   let img = this.messageContainer.getElementsByTagName("img")[0];
   if (won) {
     img.setAttribute("src", "imgs/Gift.jpeg");
+    img.setAttribute("width", "auto");
     img.setAttribute("height", "80%");
     img.setAttribute("alt", "Gift");
   } else {
     img.setAttribute("src", "imgs/Rickroll.gif");
     img.setAttribute("width", "80%");
+    img.setAttribute("height", "auto");
     img.setAttribute("style", "padding:10%");
-    img.setAttribute("alt", "Gift");
+    img.setAttribute("alt", "Rickroll");
+    setTimeout(() => this.messageContainer.getElementsByTagName("audio")[0].play(), 2000);
   }
 };
 
