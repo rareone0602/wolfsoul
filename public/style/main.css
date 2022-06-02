@@ -2,13 +2,13 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #D1ABBB;
+  background: #465081;
   color: #ffffff;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px; }
 
 body {
-  margin: 80px 0; }
+  margin: 0 0; }
 
 .heading:after {
   content: "";
@@ -186,7 +186,7 @@ hr {
       display: inline-block;
       background: #8f7a66;
       border-radius: 3px;
-      padding: 0 20px;
+      padding: 0 2%;
       text-decoration: none;
       color: #f9f6f2;
       height: 40px;
@@ -198,7 +198,7 @@ hr {
       background: rgba(237, 194, 46, 0.5);
       color: #f9f6f2; }
       .game-container .game-message.game-won img {
-        margin-top: 8px;
+        margin-top: 0;
         display: inline-block; }
     .game-container .game-message.game-won, .game-container .game-message.game-over {
       display: block; }
@@ -540,7 +540,7 @@ hr {
 
 @media screen and (max-width: 520px) {
   html, body {
-    font-size: 15px; }
+    font-size: 18px; }
 
   body {
     margin: 20px 0;
@@ -623,12 +623,12 @@ hr {
         display: inline-block;
         background: #8f7a66;
         border-radius: 3px;
-        padding: 0 20px;
+        padding: 0 20%;
         text-decoration: none;
         color: #f9f6f2;
         height: 40px;
         line-height: 42px;
-        margin-left: 9px; }
+        margin-left: 0; }
         .game-container .game-message a.keep-playing-button {
           display: none; }
       .game-container .game-message.game-won {
@@ -761,4 +761,4 @@ hr {
     line-height: 30px !important;
     margin-top: 90px !important; }
   .game-message .lower {
-    margin-top: 30px !important; } }
+    margin-top: 3% !important; } }

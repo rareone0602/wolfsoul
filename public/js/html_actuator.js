@@ -130,24 +130,27 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
   this.bestContainer.textContent = bestScore;
 };
 
+HTMLActuator.prototype.updateBackground = function () {
+  document.body.setAttribute('style', "background-image: url('imgs/gift.png');");
+};
+
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
   var message = won ? "You win!" : "Game over!";
-
   this.messageContainer.classList.add(type);
   let img = this.messageContainer.getElementsByTagName("img")[0];
+
   if (won) {
-    img.setAttribute("src", "imgs/Gift.jpeg");
-    img.setAttribute("width", "auto");
-    img.setAttribute("height", "80%");
-    img.setAttribute("alt", "Gift");
+    let yt = this.messageContainer.getElementsByTagName("iframe")[0];
+    yt.setAttribute("src", "https://www.youtube.com/embed/CnDI-_yRiDY?&autoplay=1");
+    document.body.setAttribute('style', "background-image: url('imgs/gift.png'); background-size: 100% auto;");//self.updateBackground();
   } else {
     img.setAttribute("src", "imgs/Rickroll.gif");
     img.setAttribute("width", "80%");
     img.setAttribute("height", "auto");
     img.setAttribute("style", "padding:10%");
     img.setAttribute("alt", "Rickroll");
-    setTimeout(() => this.messageContainer.getElementsByTagName("audio")[0].play(), 2000);
+    setTimeout(() => this.messageContainer.getElementsByTagName("audio")[0].play(), 500);
   }
 };
 
