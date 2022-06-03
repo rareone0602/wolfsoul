@@ -144,6 +144,7 @@ HTMLActuator.prototype.message = function (won) {
 
   if (won) {
     let yt = this.messageContainer.getElementsByTagName("iframe")[0];
+    img.setAttribute("src", "");
     yt.setAttribute("src", "https://www.youtube.com/embed/xVbf7fFddj8?&autoplay=1");
     //document.body.setAttribute('style', "background-image: url('imgs/gift.png'); background-size: 100% auto;");//self.updateBackground();
   } else {
