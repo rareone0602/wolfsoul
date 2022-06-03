@@ -172,7 +172,7 @@ GameManager.prototype.move = function (direction) {
           self.score += merged.value;
 
           // The mighty 2048 tile
-          if (merged.value === 512) {
+          if (merged.value === 256) {
             self.won = true;
           }
         } else {

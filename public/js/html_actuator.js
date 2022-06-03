@@ -145,17 +145,17 @@ HTMLActuator.prototype.message = function (won) {
 
   if (won) {
     img.setAttribute("src", "");
-    yt.setAttribute("src", "https://www.youtube.com/embed/xVbf7fFddj8?&autoplay=1");
+    yt.style.display = '';
     //document.body.setAttribute('style', "background-image: url('imgs/gift.png'); background-size: 100% auto;");//self.updateBackground();
   } else {
     img.setAttribute("src", "imgs/Rickroll.gif");
-    yt.setAttribute("src", "");
-    
+
     img.setAttribute("width", "80%");
     img.setAttribute("height", "auto");
     img.setAttribute("style", "padding:10%");
     img.setAttribute("alt", "Rickroll");
-    setTimeout(() => this.messageContainer.getElementsByTagName("audio")[0].play(), 500);
+    yt.style.display = 'none';
+    this.messageContainer.getElementsByTagName("audio")[0].play();
   }
 };
 
