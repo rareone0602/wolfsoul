@@ -22,6 +22,9 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
 
     self.updateScore(metadata.score);
     self.updateBestScore(metadata.bestScore);
+    if (metadata.hasWon) {
+      document.body.setAttribute('style', "background-image: url('imgs/gift.png'); background-size: 100% auto;");//self.updateBackground();
+    }
 
     if (metadata.terminated) {
       if (metadata.over) {
@@ -141,8 +144,8 @@ HTMLActuator.prototype.message = function (won) {
 
   if (won) {
     let yt = this.messageContainer.getElementsByTagName("iframe")[0];
-    yt.setAttribute("src", "https://www.youtube.com/embed/CnDI-_yRiDY?&autoplay=1");
-    document.body.setAttribute('style', "background-image: url('imgs/gift.png'); background-size: 100% auto;");//self.updateBackground();
+    yt.setAttribute("src", "https://www.youtube.com/embed/xVbf7fFddj8?&autoplay=1");
+    //document.body.setAttribute('style', "background-image: url('imgs/gift.png'); background-size: 100% auto;");//self.updateBackground();
   } else {
     img.setAttribute("src", "imgs/Rickroll.gif");
     img.setAttribute("width", "80%");
