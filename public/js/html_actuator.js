@@ -146,6 +146,7 @@ HTMLActuator.prototype.message = function (won) {
   if (won) {
     img.setAttribute("src", "");
     yt.style.display = '';
+    yt.allow = "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay"
     //document.body.setAttribute('style', "background-image: url('imgs/gift.png'); background-size: 100% auto;");//self.updateBackground();
   } else {
     img.setAttribute("src", "imgs/Rickroll.gif");
@@ -154,6 +155,7 @@ HTMLActuator.prototype.message = function (won) {
     img.setAttribute("height", "auto");
     img.setAttribute("style", "padding:10%");
     img.setAttribute("alt", "Rickroll");
+    yt.allow = '';
     yt.style.display = 'none';
     this.messageContainer.getElementsByTagName("audio")[0].play();
   }

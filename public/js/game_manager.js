@@ -92,6 +92,12 @@ GameManager.prototype.actuate = function () {
     this.storageManager.setHasWon();
   }
 
+  if (this.storageManager.getHasWon()) {
+    document.getElementsByClassName('twitter-share-button')[0].href = 'https://twitter.com/share?ref_src=twsrc%5EtfwY&text=I%20solved%20wolfsoul2048%20as%20a%20birthday%20gift%20for%20Yama_wolfsoul'
+  } else {
+    document.getElementsByClassName('twitter-share-button')[0].href = `https://twitter.com/share?ref_src=twsrc%5EtfwY&text=I%20achieved%20${this.storageManager.getBestScore()}%20in%20a%20birthday%20gift%20for%20Yama_wolfsoul`
+  }
+
   this.actuator.actuate(this.grid, {
     score:      this.score,
     over:       this.over,
@@ -172,7 +178,7 @@ GameManager.prototype.move = function (direction) {
           self.score += merged.value;
 
           // The mighty 2048 tile
-          if (merged.value === 256) {
+          if (merged.value === 16) {
             self.won = true;
           }
         } else {
