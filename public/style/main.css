@@ -1,6 +1,5 @@
 @import url(fonts/clear-sans.css);
 html, body {
-  margin: 0;
   padding: 0;
   background: #465081;
   color: #ffffff;
@@ -98,7 +97,7 @@ h1.title {
 
 p {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   line-height: 1.65; }
 
 a {
@@ -191,7 +190,7 @@ hr {
       color: #f9f6f2;
       height: 40px;
       line-height: 42px;
-      margin-left: 9px; }
+      margin-left: 0px; }
       .game-container .game-message a.keep-playing-button {
         display: none; }
     .game-container .game-message.game-won {
@@ -512,6 +511,10 @@ hr {
   -moz-animation-fill-mode: backwards;
   animation-fill-mode: backwards; }
 
+.above-game {
+  padding-top: 5%;
+}
+
 .above-game:after {
   content: "";
   display: block;
@@ -540,10 +543,10 @@ hr {
 
 @media screen and (max-width: 520px) {
   html, body {
-    font-size: 18px; }
+    font-size: 15px; }
 
   body {
-    margin: 20px 0;
+    margin: 0 0;
     padding: 0 20px; }
 
   h1.title {
@@ -623,7 +626,7 @@ hr {
         display: inline-block;
         background: #8f7a66;
         border-radius: 3px;
-        padding: 0 20%;
+        padding: 0 5%;
         text-decoration: none;
         color: #f9f6f2;
         height: 40px;
@@ -761,4 +764,4 @@ hr {
     line-height: 30px !important;
     margin-top: 90px !important; }
   .game-message .lower {
-    margin-top: 3% !important; } }
+    margin-top: 0 !important; } }

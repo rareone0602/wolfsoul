@@ -88,10 +88,15 @@ GameManager.prototype.actuate = function () {
     this.storageManager.setGameState(this.serialize());
   }
 
+  if (this.won) {
+    this.storageManager.setHasWon();
+  }
+  
   this.actuator.actuate(this.grid, {
     score:      this.score,
     over:       this.over,
     won:        this.won,
+    hasWon:     this.storageManager.getHasWon(),
     bestScore:  this.storageManager.getBestScore(),
     terminated: this.isGameTerminated()
   });
@@ -167,7 +172,9 @@ GameManager.prototype.move = function (direction) {
           self.score += merged.value;
 
           // The mighty 2048 tile
-          if (merged.value === 16) self.won = true;
+          if (merged.value === 16) {
+            self.won = true;
+          }
         } else {
           self.moveTile(tile, positions.farthest);
         }
