@@ -141,14 +141,16 @@ HTMLActuator.prototype.message = function (won) {
   var message = won ? "You win!" : "Game over!";
   this.messageContainer.classList.add(type);
   let img = this.messageContainer.getElementsByTagName("img")[0];
+  let yt = this.messageContainer.getElementsByTagName("iframe")[0];
 
   if (won) {
-    let yt = this.messageContainer.getElementsByTagName("iframe")[0];
     img.setAttribute("src", "");
     yt.setAttribute("src", "https://www.youtube.com/embed/xVbf7fFddj8?&autoplay=1");
     //document.body.setAttribute('style', "background-image: url('imgs/gift.png'); background-size: 100% auto;");//self.updateBackground();
   } else {
     img.setAttribute("src", "imgs/Rickroll.gif");
+    yt.setAttribute("src", "");
+    
     img.setAttribute("width", "80%");
     img.setAttribute("height", "auto");
     img.setAttribute("style", "padding:10%");
